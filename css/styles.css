@@ -1,5 +1,5 @@
 /* ============================================================
-   McGill Data Network — production stylesheet
+   McGill Data Network, production stylesheet
    Tokens sourced from the MDN design system (dark v1 design)
    ============================================================ */
 
@@ -173,7 +173,7 @@ img { max-width: 100%; display: block; }
   position: relative;
 }
 .nav__logo { display: flex; align-items: center; gap: 10px; text-decoration: none; flex-shrink: 0; }
-.nav__logo img { height: 54px; width: auto; }
+.nav__logo img { height: 68px; width: auto; }
 .nav__links { display: flex; align-items: center; gap: 30px; }
 .nav__link {
   font-family: var(--font-body);
@@ -323,7 +323,7 @@ img { max-width: 100%; display: block; }
 .timeline__text { margin: 6px 0 0; font-size: 15px; line-height: 1.6; color: var(--text-muted); }
 
 /* ============================================================
-   CARDS — pillars / audience
+   CARDS, pillars / audience
    ============================================================ */
 .card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px,1fr)); gap: 22px; margin-top: 52px; }
 .card-grid--audience { margin-top: 48px; }
@@ -374,7 +374,7 @@ img { max-width: 100%; display: block; }
 .event-feature__media {
   position: relative;
   min-height: 300px;
-  background-image: linear-gradient(135deg, rgba(41,195,214,0.92) 0%, rgba(46,143,208,0.92) 48%, rgba(42,63,158,0.94) 100%), url('../assets/backgrounds/gradient-particles-1.png');
+  background-image: linear-gradient(180deg, rgba(14,27,51,0.15) 0%, rgba(14,27,51,0.55) 65%, rgba(14,27,51,0.88) 100%), url('../assets/photos/hackathon.jpg');
   background-size: cover;
   background-position: center;
   display: flex;
@@ -409,8 +409,8 @@ img { max-width: 100%; display: block; }
 .events-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px,1fr)); gap: 22px; margin-top: 22px; }
 .event-card { border-radius: 22px; overflow: hidden; border: 1px solid var(--mdn-gray-200); box-shadow: var(--shadow-md); display: flex; flex-direction: column; }
 .event-card__media { position: relative; min-height: 200px; background-size: cover; background-position: center; display: flex; flex-direction: column; justify-content: flex-end; padding: 28px; color: #fff; }
-.event-card__media--cocktail { background-image: linear-gradient(150deg, rgba(22,39,70,0.86), rgba(14,27,51,0.92)), url('../assets/backgrounds/spiro-dark.png'); }
-.event-card__media--workshop { background-image: linear-gradient(150deg, rgba(76,119,170,0.9), rgba(22,39,70,0.92)), url('../assets/backgrounds/wireframe-dark.png'); }
+.event-card__media--cocktail { background-image: linear-gradient(180deg, rgba(14,27,51,0.1) 0%, rgba(14,27,51,0.55) 60%, rgba(14,27,51,0.9) 100%), url('../assets/photos/cocktail.jpg'); }
+.event-card__media--workshop { background-image: linear-gradient(180deg, rgba(14,27,51,0.1) 0%, rgba(14,27,51,0.55) 60%, rgba(14,27,51,0.9) 100%), url('../assets/photos/workshop.jpg'); }
 .event-card__media h3 { margin: 16px 0 0; font-family: var(--font-display); font-weight: 800; font-size: 26px; line-height: 1.05; letter-spacing: -0.02em; }
 .event-card__body { padding: 28px; display: flex; flex-direction: column; flex: 1; background: #fff; }
 .event-card__body > p { margin: 0; font-size: 15px; line-height: 1.62; color: var(--text-body); }
@@ -447,19 +447,27 @@ img { max-width: 100%; display: block; }
   padding: 8px;
 }
 .partner-cell:hover { color: #fff; }
+.partner-cell img { box-sizing: content-box; max-height: 34px; max-width: 110px; width: auto; height: auto; background: #fff; padding: 14px 22px; border-radius: 10px; opacity: 0.95; transition: opacity var(--dur-base) var(--ease-out); }
+.partner-cell:hover img { opacity: 1; }
 
 /* ============================================================
    WHY PARTNER
    ============================================================ */
 .why-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 1px;
   margin-top: 48px;
   background: var(--mdn-gray-200);
   border: 1px solid var(--mdn-gray-200);
   border-radius: 20px;
   overflow: hidden;
+}
+@media (max-width: 880px) {
+  .why-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 560px) {
+  .why-grid { grid-template-columns: 1fr; }
 }
 .why-card { background: #fff; padding: 34px; }
 .why-card__num { display: inline-block; font-family: var(--font-display); font-weight: 800; font-size: 14px; color: var(--mdn-blue); margin-bottom: 14px; }
