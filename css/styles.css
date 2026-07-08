@@ -534,7 +534,9 @@ img { max-width: 100%; display: block; }
   font-weight: 800;
   font-size: 30px;
   color: var(--mdn-blue);
+  overflow: hidden;
 }
+.avatar img { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; }
 .avatar--sm { width: 84px; height: 84px; margin: 0 auto 14px; font-size: 24px; }
 
 .social-icon {
